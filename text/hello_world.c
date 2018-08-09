@@ -7,7 +7,7 @@
 
 //#define C_PLUS_PLUS_CHAR_READ_MODE1 1
 //#define C_PLUS_PLUS_CHAR_READ_MODE2 1
-#define C_PLUS_PLUS_CHAR_READs_CURSES_MODE 1
+#define C_PLUS_PLUS_CHAR_READ_CURSES_MODE 1
 
 
 #if C_PLUS_PLUS_CHAR_READ_CURSES_MODE
@@ -24,10 +24,9 @@ int kbhit()
 }
 void main()
 {
-	char c='';
+	char c=' ';
 	int i = 0;
 	
-#if 0
 	initscr();				/* 初始化curses函数 */
 	cbreak();
 	noecho();				/* 按键时不在屏幕回显字符 */
@@ -44,7 +43,6 @@ void main()
 	nocbreak();
 	echo();
 	endwin();				/* 结束curses进程 */
-#endif
 }
 #endif
 
